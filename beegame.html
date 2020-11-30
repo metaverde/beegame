@@ -46,7 +46,7 @@
     {
         this.load.image('sky', 'assets/honeycomb.png'); /*1024 × 768 */
         this.load.image('ground', 'assets/platform.png');
-        this.load.image('obstacle', 'assets/realistichoneycomb.jpeg')/*349x144*/
+        this.load.image('obstacle', 'assets/beehive.png')/*600x597*/
         this.load.image('star', 'assets/star.png');
         this.load.image('bomb', 'assets/bomb.png');
 
@@ -59,15 +59,15 @@
 
         platforms = this.physics.add.staticGroup();
 
-        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+        platforms.create(595, 612, 'ground').setScale(3).refreshBody();
 
-        platforms.create(600, 400, 'ground');
-        /*platforms.create(50, 250, 'ground');*/
-        platforms.create(750, 220, 'ground');
+        platforms.create(100, 425, 'ground').setScale(.1).refreshBody();
+        platforms.create(110, 490, 'ground').setScale(.3).refreshBody();
+        platforms.create(824, 220, 'ground');
 
         honeycomb = this.physics.add.staticGroup();
 
-        honeycomb.create()
+        honeycomb.create(70,450, 'obstacle').setScale(0.4).refreshBody();
         
 
 
