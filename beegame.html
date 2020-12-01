@@ -35,6 +35,7 @@
     var player;
     var stars;
     var platforms;
+    
     var cursors;
     var score = 0;
     var gameOver = false;
@@ -47,6 +48,7 @@
         this.load.image('sky', 'assets/honeycomb.png'); /*1024 × 768 */
         this.load.image('ground', 'assets/platform.png');
         this.load.image('obstacle', 'assets/beehive.png')/*600x597*/
+        this.load.image('honey1', 'assets/honey1.png')/**/
         this.load.image('star', 'assets/star.png');
         this.load.image('bomb', 'assets/bomb.png');
 
@@ -64,9 +66,9 @@
         platforms.create(100, 425, 'ground').setScale(.1).refreshBody();
         platforms.create(110, 490, 'ground').setScale(.3).refreshBody();
         platforms.create(824, 220, 'ground');
+        platforms.create(400,400, 'honey1').setScale(.3).refreshBody();
 
         honeycomb = this.physics.add.staticGroup();
-
         honeycomb.create(70,450, 'obstacle').setScale(0.4).refreshBody();
         
 
